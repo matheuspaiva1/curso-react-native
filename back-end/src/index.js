@@ -1,7 +1,9 @@
 const express = require('express') // importamos
+const cors = require("cors")
 const app = express() // atribuimos as funções a variavel
 const { uuid } = require('uuidv4')
 
+app.use(cors())
 app.use(express.json())
 
 // query params (listar, filtrar as minhas informações)
